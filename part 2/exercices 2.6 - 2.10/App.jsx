@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 
 const App = () => {
   const [persons, setPersons] = useState([
-    { name: 'Arto Hellas', number: '123-456789' }
+    { name: 'Arto Hellas', number: '040-123456', id: 1 },
+    { name: 'Ada Lovelace', number: '39-44-5323523', id: 2 },
+    { name: 'Dan Abramov', number: '12-43-234345', id: 3 },
+    { name: 'Mary Poppendieck', number: '39-23-6423122', id: 4 }
   ]);
   const [newName, setNewName] = useState('');
   const [newNumber, setNewNumber] = useState('');
+  const [searchTerm, setSearchTerm] = useState('');
 
   const handleNameChange = (event) => {
     setNewName(event.target.value);
@@ -15,16 +19,22 @@ const App = () => {
     setNewNumber(event.target.value);
   };
 
+  const handleSearchChange = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
   const addPerson = (event) => {
     event.preventDefault();
 
     const personObject = {
       name: newName,
-      number: newNumber
+      number: newNumber,
+      id: persons.length + 1
     };
 
-    // Check if the name already exists in the phonebook
-    const nameExists = persons.some(person => person.name === newName);
+    const nameExists = persons.some(
+      (person) => person.name.toLowerCase() === newName.toLowerCase()
+    );
 
     if (nameExists) {
       alert(`${newName} is already added to the phonebook.`);
@@ -35,9 +45,16 @@ const App = () => {
     }
   };
 
+  const filteredPersons = persons.filter((person) =>
+    person.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div>
       <h2>Phonebook</h2>
+      <div>
+        Filter by name: <input value={searchTerm} onChange={handleSearchChange} />
+      </div>
       <form onSubmit={addPerson}>
         <div>
           name: <input value={newName} onChange={handleNameChange} />
@@ -50,8 +67,8 @@ const App = () => {
         </div>
       </form>
       <h2>Numbers</h2>
-      {persons.map((person, index) => (
-        <div key={index}>
+      {filteredPersons.map((person) => (
+        <div key={person.id}>
           {person.name} {person.number}
         </div>
       ))}
