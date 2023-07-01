@@ -3,6 +3,7 @@ import Filter from './Filter';
 import axios from 'axios';
 import PersonForm from './PersonForm';
 import Persons from './Persons';
+import Notification from "./Notification";
 
 const App = () => {
   const [persons, setPersons] = useState([
