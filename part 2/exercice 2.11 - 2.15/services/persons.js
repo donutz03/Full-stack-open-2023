@@ -8,7 +8,7 @@ const getAll = () => {
       alert(
         `the person '$p.content}' was already deleted from server`
       )
-      setPersoms(persons.filter(p => p.id !== id))
+      setPersons(persons.filter(p => p.id !== id))
     });
 
 const create = (newObject) => {
