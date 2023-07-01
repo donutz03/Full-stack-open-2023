@@ -4,7 +4,12 @@ const baseUrl = "../db.json";
 const getAll = () => {
   const request = axios.get(baseUrl);
   return request.then((response) => response.data);
-};
+}.catch(error => {
+      alert(
+        `the person '$p.content}' was already deleted from server`
+      )
+      setPersoms(persons.filter(p => p.id !== id))
+    });
 
 const create = (newObject) => {
   const request = axios.post(baseUrl, newObject);
