@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Filter from './Filter';
+import axios from 'axios';
 import PersonForm from './PersonForm';
 import Persons from './Persons';
 
@@ -14,6 +15,18 @@ const App = () => {
   const [newNumber, setNewNumber] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
 
+  useEffect(() => {
+  axios.get('/db.json') 
+    .then(response => {
+      setPersons(response.data.persons);
+    })
+    .catch(error => {
+      console.log(error);
+    });
+}, []);
+
+
+  
   const handleNameChange = (event) => {
     setNewName(event.target.value);
   };
