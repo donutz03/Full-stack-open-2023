@@ -14,6 +14,8 @@ const App = () => {
   const [newName, setNewName] = useState('');
   const [newNumber, setNewNumber] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  const [errorMessage, setErrorMessage] = useState('some error happened...')
+
 
   useEffect(() => {
   axios.get('/db.json') 
@@ -94,6 +96,7 @@ const App = () => {
   return (
     <div>
       <h2>Phonebook</h2>
+    <Notification message={errorMessage} />
 
       <Filter searchTerm={searchTerm} onSearchChange={handleSearchChange} />
 
