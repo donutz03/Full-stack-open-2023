@@ -2,13 +2,20 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 const CountryInfo = ({ country }) => {
+  const { name, capital, area, flags, languages } = country;
+
   return (
     <div>
-      <h2>{country.name}</h2>
-      <p>Capital: {country.capital}</p>
-      <p>Population: {country.population}</p>
-      <p>Languages: {country.languages.map(lang => lang.name).join(', ')}</p>
-      {/* Add other relevant country information */}
+      <h2>{name.common}</h2>
+      <p>Capital: {capital}</p>
+      <p>Area: {area} km²</p>
+      <h3>Languages:</h3>
+      <ul>
+        {Object.values(languages).map((language) => (
+          <li key={language}>{language}</li>
+        ))}
+      </ul>
+      <img src={flags.png} alt={`${name.common} Flag`} style={{ maxWidth: '200px' }} />
     </div>
   );
 };
@@ -27,11 +34,10 @@ const App = () => {
       .then((response) => {
         const countriesData = response.data;
 
-        if (countriesData.length <= 10) {
-          setCountries(countriesData);
+        if (countriesData.length === 0) {
+          alert('No countries found');
         } else {
-          setCountries([]);
-          alert('Too many matches, please specify your search');
+          setCountries(countriesData);
         }
       })
       .catch((error) => {
@@ -54,17 +60,18 @@ const App = () => {
         <button onClick={searchCountries}>Search</button>
       </div>
 
-      {countries.length === 1 ? (
-        <CountryInfo country={countries[0]} />
-      ) : (
+      {countries.length > 1 && countries.length <= 10 ? (
         countries.map((country) => (
           <div key={country.name.common}>
             <p>{country.name.common}</p>
           </div>
         ))
+      ) : (
+        countries.length === 1 && <CountryInfo country={countries[0]} />
       )}
     </div>
   );
 };
 
 export default App;
+
