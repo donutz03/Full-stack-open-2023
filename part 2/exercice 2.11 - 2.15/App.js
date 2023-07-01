@@ -40,13 +40,40 @@ const App = () => {
   };
 
   const addPerson = (event) => {
-    event.preventDefault();
+  event.preventDefault();
 
-    const personObject = {
-      name: newName,
-      number: newNumber,
-      id: persons.length + 1
-    };
+  const personObject = {
+    name: newName,
+    number: newNumber,
+  };
+
+  const existingPerson = persons.find(person => person.name.toLowerCase() === newName.toLowerCase());
+
+  if (existingPerson) {
+    if (window.confirm(`${existingPerson.name} is already added to the phonebook. Replace the old number with a new one?`)) {
+      axios.put(`/api/persons/${existingPerson.id}`, personObject) // Replace '/api/persons' with the appropriate API endpoint
+        .then(response => {
+          setPersons(persons.map(person => person.id === existingPerson.id ? response.data : person));
+          setNewName('');
+          setNewNumber('');
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  } else {
+    axios.post('/api/persons', personObject) // Replace '/api/persons' with the appropriate API endpoint
+      .then(response => {
+        setPersons(persons.concat(response.data));
+        setNewName('');
+        setNewNumber('');
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  }
+};
+
 
     const nameExists = persons.some(
       (person) => person.name.toLowerCase() === newName.toLowerCase()
