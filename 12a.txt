@@ -7,3 +7,15 @@ latest: Pulling from library/hello-world
 b8dfe127a29: Pull complete
 Digest:sha256:5122f6204b6a3596e048758cabba3c46b1c937a46b5be6225b835d091b90e46c
 Status: Downloaded newer imge from hello-world:latest
+
+$ docker container run --help
+
+Usage: docker container run [OPTIONS] IMAGE [COMMAND] [ARG...]
+Run a command in a new container
+
+Options:
+...
+-i, --interactive 
+Keep STDIN open even if not attached -t, -tty
+Allocate a pseudo-TTY
+...
