@@ -11,3 +11,4 @@ const add = (a: number, b: number) => {
   return a + b;
 }
 
+let x: SomeType;
