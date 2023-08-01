@@ -32,3 +32,19 @@ npm run ts-node file.ts -- -s --someoption
     "noImplicitAny": false
   }
 }
+const multiplicator = (a, b, printTezt)
+=> { 
+  console.log(printText, a * b);
+}
+
+multiplicator(2, 4, '2 x 4 = ');
+
+
+
+
+
+
+
+
+
+
