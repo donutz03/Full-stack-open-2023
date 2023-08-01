@@ -14,3 +14,5 @@ const add = (a: number, b: number) => {
 let x: SomeType;
 
 let x;
+
+npm install -g ts-node typescript
