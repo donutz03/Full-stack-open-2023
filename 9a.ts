@@ -39,6 +39,11 @@ const multiplicator = (a, b, printTezt)
 
 multiplicator(2, 4, '2 x 4 = ');
 
+const multiplicator = (a, b, printText) => {
+console.log(printText, a * b);
+}
+
+multiplicator('str', 4, '4 * str');
 
 
 
