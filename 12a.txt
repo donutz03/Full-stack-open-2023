@@ -1,3 +1,9 @@
 
 $ docker -v
 Docker version 20.10.5, build 55c4c88
+
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+b8dfe127a29: Pull complete
+Digest:sha256:5122f6204b6a3596e048758cabba3c46b1c937a46b5be6225b835d091b90e46c
+Status: Downloaded newer imge from hello-world:latest
