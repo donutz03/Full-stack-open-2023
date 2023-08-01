@@ -6,3 +6,8 @@ const birthdayHero = "Jane User";
 const age = 22;
 
 console.log(birthdayGreeter(birthdayHero, age));
+
+const add = (a: number, b: number) => {
+  return a + b;
+}
+
