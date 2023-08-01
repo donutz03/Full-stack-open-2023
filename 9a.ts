@@ -16,3 +16,13 @@ let x: SomeType;
 let x;
 
 npm install -g ts-node typescript
+
+{
+  "scripts": {
+    "ts-node": "ts-node"
+   },
+}
+
+
+
+
