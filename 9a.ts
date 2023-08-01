@@ -25,4 +25,10 @@ npm install -g ts-node typescript
 
 npm run ts-node file.ts -- -s --someoption
 
+//tsconfig.json
 
+{
+  "compilerOptions":{
+    "noImplicitAny": false
+  }
+}
