@@ -13,3 +13,4 @@ try {
   console.log(errorMessage);
 }
 npm install --save-dev @types/react @types/express @types/lodash @types/jest @types/mongoose
+npm install --save-dev @types/node
