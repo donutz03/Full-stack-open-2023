@@ -44,7 +44,11 @@ console.log(printText, a * b);
 }
 
 multiplicator('str', 4, '4 * str');
+const multiplicator = (a: number, b: number, printText: string) => {
+  console.log(printText, a * b);
+}
 
+multiplicator('str', 4, 'str cu 4 nu mere')
 
 
 
