@@ -12,3 +12,5 @@ const add = (a: number, b: number) => {
 }
 
 let x: SomeType;
+
+let x;
