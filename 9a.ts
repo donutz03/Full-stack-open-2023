@@ -73,6 +73,9 @@ if (op === 'multiply') {
   } 
 }
 
+const calculator = (a: number, b: number, op: Operation): number | 
+string => { 
+}
 
 
 
