@@ -49,7 +49,7 @@ const multiplicator = (a: number, b: number, printText: string) => {
 }
 
 multiplicator('str', 4, 'str cu 4 nu mere')
-
+type Operation = 'multiply' | 'add' | 'divide';
 
 
 
