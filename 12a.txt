@@ -19,3 +19,12 @@ Options:
 Keep STDIN open even if not attached -t, -tty
 Allocate a pseudo-TTY
 ...
+
+$ docker container ls -a
+CONTAINER ID IMAGE COMMAND CREATED STATUS NAMES
+b8548b9faec3 ubuntu "bash" 3 minutes ago Exited (0) 6 seconds ago
+
+
+
+
+
