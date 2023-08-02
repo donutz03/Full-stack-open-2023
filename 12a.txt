@@ -36,3 +36,8 @@ CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS             NAMES
 8f5abc55242a   ubuntu    "bash"    8 minutes ago    Up 1 minutes       hopeful_clarke             
 $ docker kill hopeful_clarke
 hopeful_clarke
+
+$ docker container ls -a
+CONTAINER ID IMAGE COMMAND CREATED STATUS NAMES 
+b8548b9faec3 ubuntu "bash" 26 minutes ago Exited 2 seconds ago hopeful_clarke
+
