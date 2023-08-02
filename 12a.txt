@@ -59,7 +59,9 @@ commit CONTAINER-ID-OR-CONTAINER-NAME NEW-IMAGE-NAME
 
 $ docker commit hopeful_clarke hello-node-world
 
-
+$ docker image ls 
+REPOSITORY TAG IMAGE ID CREATED SIZE 
+hello-node-world latest eer776183732 9 minutes ago 252MB ubuntu latest 1318b700e415 2 weeks ago 72.8MB hello-world latest d1165f221234 5 months ago 13.3kB
 
 
 
