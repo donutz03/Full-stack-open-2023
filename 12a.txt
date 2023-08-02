@@ -48,3 +48,6 @@ root@b8548b9faec3:/# apt-get -y install nano
 root@b8548b9faec3:/# nano /usr/src/app/index.js
 
 console.log('Hello World')
+
+curl-sL https://deb.nodesource.com/setup_16.x | bash
+apt install -y nodejs
