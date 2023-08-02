@@ -54,3 +54,5 @@ apt install -y nodejs
 
 root@b8548b9faec3:/# node /usr/src/app/index.js
 Hello World
+
+commit CONTAINER-ID-OR-CONTAINER-NAME NEW-IMAGE-NAME
