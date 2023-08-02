@@ -43,5 +43,7 @@ b8548b9faec3 ubuntu "bash" 26 minutes ago Exited 2 seconds ago hopeful_clarke
 $ docker start -i hopeful_clarke
 root@b8548b9faec3:/#
 
-
+root@b8548b9faec3:/# apt-get update
+root@b8548b9faec3:/# apt-get -y install nano
+root@b8548b9faec3:/# nano /usr/src/app/index.js
 
