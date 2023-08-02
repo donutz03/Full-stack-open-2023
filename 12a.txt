@@ -63,5 +63,8 @@ $ docker image ls
 REPOSITORY TAG IMAGE ID CREATED SIZE 
 hello-node-world latest eer776183732 9 minutes ago 252MB ubuntu latest 1318b700e415 2 weeks ago 72.8MB hello-world latest d1165f221234 5 months ago 13.3kB
 
+docker run -it hello-node-world bash
+root@4d1b322e1aff:/# node /usr/src/app/index.js
 
+docker run -it hello-node-world bash root@4d1b322e1aff:/# node /usr/src/app/index.js
 
