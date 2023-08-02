@@ -40,4 +40,8 @@ hopeful_clarke
 $ docker container ls -a
 CONTAINER ID IMAGE COMMAND CREATED STATUS NAMES 
 b8548b9faec3 ubuntu "bash" 26 minutes ago Exited 2 seconds ago hopeful_clarke
+$ docker start -i hopeful_clarke
+root@b8548b9faec3:/#
+
+
 
