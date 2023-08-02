@@ -47,3 +47,4 @@ root@b8548b9faec3:/# apt-get update
 root@b8548b9faec3:/# apt-get -y install nano
 root@b8548b9faec3:/# nano /usr/src/app/index.js
 
+console.log('Hello World')
