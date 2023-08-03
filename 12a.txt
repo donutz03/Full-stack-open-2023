@@ -80,3 +80,7 @@ CONTAINER ID IMAGE COMMAND CREATED STATUS NAMES
 b8548bfaec3 ubuntu "bash" 31 minutes ago Exited (0) 9 seconds ago hopeful_clarke
 
 $ docker container rm hopeful_clarke
+
+$ docker container run -it --name hello-node node:16 bash
+
+$ docker container run -it --name hello-node node:16 bash
