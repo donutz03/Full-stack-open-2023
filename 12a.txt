@@ -84,3 +84,20 @@ $ docker container rm hopeful_clarke
 $ docker container run -it --name hello-node node:16 bash
 
 $ docker container run -it --name hello-node node:16 bash
+
+root@77d1023af893:/# mkdir /usr/src/app
+
+root@77d1023af893:/# mkdir /usr/src/app
+
+
+
+
+
+
+
+
+
+
+
+
+
