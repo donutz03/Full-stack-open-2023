@@ -68,3 +68,15 @@ root@4d1b322e1aff:/# node /usr/src/app/index.js
 
 docker run -it hello-node-world bash root@4d1b322e1aff:/# node /usr/src/app/index.js
 
+$ docker container ls -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                  NAMES
+b8548b9faec3   ubuntu    "bash"    31 minutes ago   Exited (0) 9 seconds ago               hopeful_clarke
+
+$ docker container rm hopeful_clarke
+hopeful_clarke
+
+$ docker container ls -a 
+CONTAINER ID IMAGE COMMAND CREATED STATUS NAMES
+b8548bfaec3 ubuntu "bash" 31 minutes ago Exited (0) 9 seconds ago hopeful_clarke
+
+$ docker container rm hopeful_clarke
