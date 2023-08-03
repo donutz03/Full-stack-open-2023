@@ -89,6 +89,10 @@ root@77d1023af893:/# mkdir /usr/src/app
 
 root@77d1023af893:/# mkdir /usr/src/app
 
+$ docker container cp ./index.js hello-node:/usr/src/app/index.js
+
+$ docker container cp ./index.js hello-node:/usr/src/app/index.js
+$ docker container cp ./index.js hello-node:/usr/src/app/index.js
 
 
 
