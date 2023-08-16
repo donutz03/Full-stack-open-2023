@@ -18,3 +18,20 @@ res.end('hw')}
 const PORT = 3001
 app.listen(PORT)
 console.log(`srv running on port ${PORT}`);
+const http=require('http')
+let notes=[
+{
+id: 1,
+content: "html",
+important: true},
+{id:2,
+content:"js only in browser",
+important:false},
+{id:3,
+content:"get &post are most important of http protocol",
+important:true}]
+const app=http.createServer((request,response)=>{response.writeHead(200,{'content-type':'application/json'})
+response.end(JSON.stringify(notes))})
+const PORT=3001
+app.listen(PORT)
+console.log(`srv running on port ${PORT}`)
